@@ -103,6 +103,13 @@
   color: #fff;
   margin: 5rem auto;
   text-transform: uppercase;
+  outline: none;
+  border: none;
+}
+
+.details .detail-about .detail-register:hover {
+  background: transparent linear-gradient(114deg, #d7555f 0%, #9d4ccc 100%) 0% 0% no-repeat padding-box;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 550px) {

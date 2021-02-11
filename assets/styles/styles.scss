@@ -48,6 +48,15 @@
       color: $primary-text;
       margin: 5rem auto;
       text-transform: uppercase;
+      outline: none;
+      border: none;
+
+      &:hover {
+        background: transparent
+          linear-gradient(114deg, #d7555f 0%, #9d4ccc 100%) 0% 0% no-repeat
+          padding-box;
+        cursor: pointer;
+      }
 
       @media screen and (max-width: 550px) {
         transform: scale(0.6);

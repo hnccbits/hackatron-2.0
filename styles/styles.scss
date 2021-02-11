@@ -7,6 +7,9 @@
 
 .header {
   background: #000;
+  img {
+    height: 100vh;
+  }
 }
 
 .details {
@@ -15,18 +18,22 @@
   @include primary-h2;
   padding: 10rem 0;
 
+  @media screen and (max-width: 550px) {
+    padding: 4rem 0.5rem;
+  }
+
   .detail-about {
     .detail-tagline {
       @include primary-h1;
     }
     .detail-date {
-      margin: 4rem auto;
+      @include headers-margin;
     }
     .detail-clubName {
-      margin: 4rem auto;
+      @include headers-margin;
     }
     .detail-address {
-      margin: 4rem auto 0;
+      @include headers-margin;
     }
 
     .detail-register {
@@ -41,6 +48,10 @@
       color: $primary-text;
       margin: 5rem auto;
       text-transform: uppercase;
+
+      @media screen and (max-width: 550px) {
+        transform: scale(0.6);
+      }
     }
   }
 
@@ -55,12 +66,30 @@
     outline: 8px solid $secondary-border;
     padding: 6rem 5rem;
 
+    @media screen and (max-width: 1460px) {
+      flex-direction: column-reverse;
+      padding: 1rem 0.5rem;
+    }
+
     .dscp-info {
-      flex: 0.6;
+      flex: 1;
       text-align: left;
+      .dscp-hackatron {
+        margin-bottom: 2rem;
+      }
+      .dscp-para {
+        padding-right: 5rem;
+        @media screen and (max-width: 1460px) {
+          padding-right: 0;
+        }
+      }
     }
     .dscp-image {
-      flex: 0.3;
+      flex: 1;
+
+      img {
+        width: 100%;
+      }
     }
   }
 }

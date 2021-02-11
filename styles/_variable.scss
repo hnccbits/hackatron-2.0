@@ -7,7 +7,18 @@ $secondary-border: #44164c;
 $primary-bgcolor: #000;
 $primary-fontFamily: 'Space Mono', monospace;
 $size-h1: 4.685rem;
+$sizeM-h1: 2.4rem;
+$sizeT-h1: 3.2rem;
 $size-h2: 2.125rem;
+$sizeM-h2: 1.2rem;
+$sizeT-h2: 1.85rem;
+
+@mixin headers-margin {
+  margin: 4rem auto;
+  @media screen and (max-width: 550px) {
+    margin: 1.5rem auto;
+  }
+}
 
 @mixin primary-h1 {
   font-size: $size-h1;
@@ -18,6 +29,13 @@ $size-h2: 2.125rem;
   line-height: 150px;
   text-align: center;
   text-transform: uppercase;
+
+  @media screen and (max-width: 550px) {
+    font-size: $sizeM-h1;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    line-height: normal;
+  }
 }
 
 @mixin primary-h2 {
@@ -28,4 +46,11 @@ $size-h2: 2.125rem;
   font-family: $primary-fontFamily;
   text-align: center;
   text-transform: uppercase;
+
+  @media screen and (max-width: 550px) {
+    font-size: $sizeM-h2;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    line-height: normal;
+  }
 }

@@ -10,6 +10,10 @@
   background: #000;
 }
 
+.header img {
+  height: 100vh;
+}
+
 .details {
   background-color: #000;
   color: #fff;
@@ -23,6 +27,21 @@
   padding: 10rem 0;
 }
 
+@media screen and (max-width: 550px) {
+  .details {
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    line-height: normal;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .details {
+    padding: 4rem 0.5rem;
+  }
+}
+
 .details .detail-about .detail-tagline {
   font-size: 4.685rem;
   color: #fff;
@@ -34,16 +53,43 @@
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 550px) {
+  .details .detail-about .detail-tagline {
+    font-size: 2.4rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    line-height: normal;
+  }
+}
+
 .details .detail-about .detail-date {
   margin: 4rem auto;
+}
+
+@media screen and (max-width: 550px) {
+  .details .detail-about .detail-date {
+    margin: 1.5rem auto;
+  }
 }
 
 .details .detail-about .detail-clubName {
   margin: 4rem auto;
 }
 
+@media screen and (max-width: 550px) {
+  .details .detail-about .detail-clubName {
+    margin: 1.5rem auto;
+  }
+}
+
 .details .detail-about .detail-address {
-  margin: 4rem auto 0;
+  margin: 4rem auto;
+}
+
+@media screen and (max-width: 550px) {
+  .details .detail-about .detail-address {
+    margin: 1.5rem auto;
+  }
 }
 
 .details .detail-about .detail-register {
@@ -57,6 +103,13 @@
   color: #fff;
   margin: 5rem auto;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 550px) {
+  .details .detail-about .detail-register {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
 }
 
 .details .detail-dscp {
@@ -78,16 +131,44 @@
   padding: 6rem 5rem;
 }
 
+@media screen and (max-width: 1460px) {
+  .details .detail-dscp {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 1rem 0.5rem;
+  }
+}
+
 .details .detail-dscp .dscp-info {
-  -webkit-box-flex: 0.6;
-      -ms-flex: 0.6;
-          flex: 0.6;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   text-align: left;
 }
 
+.details .detail-dscp .dscp-info .dscp-hackatron {
+  margin-bottom: 2rem;
+}
+
+.details .detail-dscp .dscp-info .dscp-para {
+  padding-right: 5rem;
+}
+
+@media screen and (max-width: 1460px) {
+  .details .detail-dscp .dscp-info .dscp-para {
+    padding-right: 0;
+  }
+}
+
 .details .detail-dscp .dscp-image {
-  -webkit-box-flex: 0.3;
-      -ms-flex: 0.3;
-          flex: 0.3;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.details .detail-dscp .dscp-image img {
+  width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */

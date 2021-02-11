@@ -1,0 +1,66 @@
+@import './variable';
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background: #000;
+}
+
+.details {
+  background-color: $primary-bgcolor;
+  color: $primary-text;
+  @include primary-h2;
+  padding: 10rem 0;
+
+  .detail-about {
+    .detail-tagline {
+      @include primary-h1;
+    }
+    .detail-date {
+      margin: 4rem auto;
+    }
+    .detail-clubName {
+      margin: 4rem auto;
+    }
+    .detail-address {
+      margin: 4rem auto 0;
+    }
+
+    .detail-register {
+      border-radius: 50px;
+      border: 1px solid $primary-border;
+      font-size: $size-h2;
+      line-height: 65px;
+      letter-spacing: 6.2px;
+      padding: 0.8rem 3rem;
+      background: transparent linear-gradient(114deg, #9d4ccc 0%, #d7555f 100%)
+        0% 0% no-repeat padding-box;
+      color: $primary-text;
+      margin: 5rem auto;
+      text-transform: uppercase;
+    }
+  }
+
+  .detail-dscp {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    border: 6px solid #fff;
+    outline: 8px solid $secondary-border;
+    padding: 6rem 5rem;
+
+    .dscp-info {
+      flex: 0.6;
+      text-align: left;
+    }
+    .dscp-image {
+      flex: 0.3;
+    }
+  }
+}

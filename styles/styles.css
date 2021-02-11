@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header {
+  background: #000;
+}
+
+.details {
+  background-color: #000;
+  color: #fff;
+  font-size: 2.125rem;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-family: "Space Mono", monospace;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10rem 0;
+}
+
+.details .detail-about .detail-tagline {
+  font-size: 4.685rem;
+  color: #fff;
+  font-weight: 800;
+  font-family: "Space Mono", monospace;
+  letter-spacing: 1px;
+  line-height: 150px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.details .detail-about .detail-date {
+  margin: 4rem auto;
+}
+
+.details .detail-about .detail-clubName {
+  margin: 4rem auto;
+}
+
+.details .detail-about .detail-address {
+  margin: 4rem auto 0;
+}
+
+.details .detail-about .detail-register {
+  border-radius: 50px;
+  border: 1px solid #707070;
+  font-size: 2.125rem;
+  line-height: 65px;
+  letter-spacing: 6.2px;
+  padding: 0.8rem 3rem;
+  background: transparent linear-gradient(114deg, #9d4ccc 0%, #d7555f 100%) 0% 0% no-repeat padding-box;
+  color: #fff;
+  margin: 5rem auto;
+  text-transform: uppercase;
+}
+
+.details .detail-dscp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  border: 6px solid #fff;
+  outline: 8px solid #44164c;
+  padding: 6rem 5rem;
+}
+
+.details .detail-dscp .dscp-info {
+  -webkit-box-flex: 0.6;
+      -ms-flex: 0.6;
+          flex: 0.6;
+  text-align: left;
+}
+
+.details .detail-dscp .dscp-image {
+  -webkit-box-flex: 0.3;
+      -ms-flex: 0.3;
+          flex: 0.3;
+}
+/*# sourceMappingURL=styles.css.map */

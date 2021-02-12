@@ -7,8 +7,93 @@
 
 .header {
   background: #000;
-  img {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+
+  .sky {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100vh;
+    z-index: 20;
+  }
+  .rocket {
+    position: absolute;
+    right: 10%;
+    bottom: 35%;
+    width: 120px;
+    z-index: 21;
+    transition: all 400ms ease-out;
+
+    @media screen and (max-width: 550px) {
+      width: 20%;
+      left: 0;
+      right: 0;
+      bottom: 22%;
+      margin: auto;
+      transform: rotateZ(1.3deg);
+    }
+    @media screen and (max-width: 800px) {
+      width: 12%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      bottom: 20%;
+    }
+  }
+  .logo {
+    position: absolute;
+    z-index: 30;
+    top: 10%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 42%;
+    @media screen and (max-width: 550px) {
+      width: 92%;
+    }
+    @media screen and (max-width: 800px) {
+      width: 80%;
+    }
+  }
+  .saturn {
+    position: absolute;
+    z-index: 26;
+  }
+  .buildings-1 {
+    position: absolute;
+    z-index: 27;
+    bottom: 55px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 70%;
+  }
+  .buildings-2 {
+    position: absolute;
+    z-index: 28;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 60%;
+  }
+  .buildings-3 {
+    position: absolute;
+    z-index: 29;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+  }
+  .layer {
+    position: absolute;
+    z-index: 29;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    left: 0;
   }
 }
 
@@ -72,7 +157,7 @@
     width: 80%;
     margin: 0 auto;
     border: 6px solid #fff;
-    outline: 8px solid $secondary-border;
+    outline: 12px solid $secondary-border;
     padding: 6rem 5rem;
 
     @media screen and (max-width: 1460px) {
@@ -82,12 +167,13 @@
 
     .dscp-info {
       flex: 1;
-      text-align: left;
       .dscp-hackatron {
+        text-align: left;
         margin-bottom: 2rem;
       }
       .dscp-para {
         padding-right: 5rem;
+        text-align: justify;
         @media screen and (max-width: 1460px) {
           padding-right: 0;
         }
@@ -99,6 +185,47 @@
       img {
         width: 100%;
       }
+    }
+  }
+}
+
+.mascot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 80%;
+  margin: 5% auto;
+
+  @media screen and (max-width: 1460px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mascot-image {
+    flex: 1;
+    img {
+      width: 100%;
+    }
+  }
+  .mascot-info {
+    flex: 1;
+    padding-left: 2rem;
+    .mascot-header {
+      font-size: 3rem;
+      color: #000;
+      font-weight: 700;
+      text-align: left;
+      font-family: $primary-fontFamily;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 2rem;
+    }
+    .mascot-info-para {
+      font-size: 1.8rem;
+      font-weight: 400;
+      font-family: $primary-fontFamily;
+      text-align: justify;
+      width: 80%;
     }
   }
 }

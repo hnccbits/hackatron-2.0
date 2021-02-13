@@ -1,6 +1,8 @@
-.sponsors-section {
+.prizes-section {
     padding: 3rem 2rem;
     font-family: $primary-fontFamily;
+    background: $primary-bgcolor;
+    color: $primary-text;
 
     &>h2 {
         font-size: 3rem;
@@ -8,13 +10,14 @@
         letter-spacing: 0.5px;
         text-align: center;
         text-transform: uppercase;
-        color: $secondary-text;
-        margin: 2rem 0 4rem;
+        margin: 0 0 3rem;
+        border-bottom: 1px solid rgba(255, 255, 255, .233);
+        padding-bottom: 2rem;
     }
 
-    .sponsor__box {
+    .prize__box {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
         row-gap: 4rem;
         align-items: center;
         justify-items: center;
@@ -25,13 +28,13 @@
         }
 
         @media only screen and (max-width: 800px) {
-            padding: 0;
+            padding: 1rem 2rem;
         }
 
         &>* {
             border: 1px solid rgba(0, 0, 0, .125);
-            color: $primary-text;
-            padding: 4rem 1rem;
+            padding: 3.5rem 1rem;
+            cursor: pointer;
             border-radius: 50%;
             background: linear-gradient(to right bottom, #D74277, #6D00A3);
         }

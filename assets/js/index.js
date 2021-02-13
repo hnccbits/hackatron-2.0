@@ -5,6 +5,9 @@ $(document).ready(function () {
     axis: 'x',
   });
 
+  $('.prize__box>*').tilt({
+    scale: 1.1
+  });
 });
 
 const translate = document.querySelectorAll('.translate');

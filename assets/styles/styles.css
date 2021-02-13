@@ -161,7 +161,7 @@ footer {
   text-align: center;
   text-transform: uppercase;
   color: #000;
-  margin-bottom: 4rem;
+  margin: 2rem 0 4rem;
 }
 
 .sponsors-section .sponsor__box {
@@ -189,6 +189,53 @@ footer {
   border: 1px solid rgba(0, 0, 0, 0.125);
   color: #fff;
   padding: 4rem 1rem;
+  border-radius: 50%;
+  background: linear-gradient(to right bottom, #D74277, #6D00A3);
+}
+
+.prizes-section {
+  padding: 3rem 2rem;
+  font-family: "Space Mono", monospace;
+  background: #000;
+  color: #fff;
+}
+
+.prizes-section > h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 0 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.233);
+  padding-bottom: 2rem;
+}
+
+.prizes-section .prize__box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  row-gap: 4rem;
+  align-items: center;
+  justify-items: center;
+  padding: 4rem 8rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .prizes-section .prize__box {
+    padding: 3rem 6rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .prizes-section .prize__box {
+    padding: 1rem 2rem;
+  }
+}
+
+.prizes-section .prize__box > * {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 3.5rem 1rem;
+  cursor: pointer;
   border-radius: 50%;
   background: linear-gradient(to right bottom, #D74277, #6D00A3);
 }

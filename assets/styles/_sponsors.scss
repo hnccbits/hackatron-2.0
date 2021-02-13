@@ -1,0 +1,39 @@
+.sponsors-section {
+    padding: 3rem 2rem;
+    font-family: $primary-fontFamily;
+
+    &>h2 {
+        font-size: 3rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $secondary-text;
+        margin: 2rem 0 4rem;
+    }
+
+    .sponsor__box {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        row-gap: 4rem;
+        align-items: center;
+        justify-items: center;
+        padding: 4rem 8rem;
+
+        @media only screen and (max-width: 1000px) {
+            padding: 3rem 6rem;
+        }
+
+        @media only screen and (max-width: 800px) {
+            padding: 0;
+        }
+
+        &>* {
+            border: 1px solid rgba(0, 0, 0, .125);
+            color: $primary-text;
+            padding: 4rem 1rem;
+            border-radius: 50%;
+            background: linear-gradient(to right bottom, #D74277, #6D00A3);
+        }
+    }
+}

@@ -1,8 +1,18 @@
 @import './variable';
+@import './footer';
+@import './faq';
+@import './sponsors';
+@import './prizes';
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
 }
 
 .header {
@@ -19,6 +29,7 @@
     height: 100vh;
     z-index: 20;
   }
+
   .rocket {
     position: absolute;
     right: 10%;
@@ -35,6 +46,7 @@
       margin: auto;
       transform: rotateZ(1.3deg);
     }
+
     @media screen and (max-width: 800px) {
       width: 12%;
       left: 0;
@@ -43,6 +55,7 @@
       bottom: 20%;
     }
   }
+
   .logo {
     position: absolute;
     z-index: 30;
@@ -51,17 +64,21 @@
     right: 0;
     margin: auto;
     width: 42%;
+
     @media screen and (max-width: 550px) {
       width: 92%;
     }
+
     @media screen and (max-width: 800px) {
       width: 80%;
     }
   }
+
   .saturn {
     position: absolute;
     z-index: 26;
   }
+
   .buildings-1 {
     position: absolute;
     z-index: 27;
@@ -71,6 +88,7 @@
     margin: auto;
     width: 70%;
   }
+
   .buildings-2 {
     position: absolute;
     z-index: 28;
@@ -80,6 +98,7 @@
     margin: auto;
     width: 60%;
   }
+
   .buildings-3 {
     position: absolute;
     z-index: 29;
@@ -87,6 +106,7 @@
     left: 0;
     width: 100%;
   }
+
   .layer {
     position: absolute;
     z-index: 29;
@@ -111,12 +131,15 @@
     .detail-tagline {
       @include primary-h1;
     }
+
     .detail-date {
       @include headers-margin;
     }
+
     .detail-clubName {
       @include headers-margin;
     }
+
     .detail-address {
       @include headers-margin;
     }
@@ -128,8 +151,7 @@
       line-height: 65px;
       letter-spacing: 6.2px;
       padding: 0.8rem 3rem;
-      background: transparent linear-gradient(114deg, #9d4ccc 0%, #d7555f 100%)
-        0% 0% no-repeat padding-box;
+      background: transparent linear-gradient(114deg, #9d4ccc 0%, #d7555f 100%) 0% 0% no-repeat padding-box;
       color: $primary-text;
       margin: 5rem auto;
       text-transform: uppercase;
@@ -137,9 +159,7 @@
       border: none;
 
       &:hover {
-        background: transparent
-          linear-gradient(114deg, #d7555f 0%, #9d4ccc 100%) 0% 0% no-repeat
-          padding-box;
+        background: transparent linear-gradient(114deg, #d7555f 0%, #9d4ccc 100%) 0% 0% no-repeat padding-box;
         cursor: pointer;
       }
 
@@ -167,18 +187,22 @@
 
     .dscp-info {
       flex: 1;
+
       .dscp-hackatron {
         text-align: left;
         margin-bottom: 2rem;
       }
+
       .dscp-para {
         padding-right: 5rem;
         text-align: justify;
+
         @media screen and (max-width: 1460px) {
           padding-right: 0;
         }
       }
     }
+
     .dscp-image {
       flex: 1;
 
@@ -203,13 +227,16 @@
 
   .mascot-image {
     flex: 1;
+
     img {
       width: 100%;
     }
   }
+
   .mascot-info {
     flex: 1;
     padding-left: 2rem;
+
     .mascot-header {
       font-size: 3rem;
       color: #000;
@@ -220,6 +247,7 @@
       letter-spacing: 1.5px;
       margin-bottom: 2rem;
     }
+
     .mascot-info-para {
       font-size: 1.8rem;
       font-weight: 400;

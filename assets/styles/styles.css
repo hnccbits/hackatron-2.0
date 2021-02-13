@@ -269,22 +269,11 @@ a:visited {
 
 .header .rocket {
   position: absolute;
-  right: 10%;
-  bottom: 35%;
-  width: 120px;
+  right: 7%;
+  bottom: 18%;
+  width: 110px;
   z-index: 21;
   transition: all 400ms ease-out;
-}
-
-@media screen and (max-width: 550px) {
-  .header .rocket {
-    width: 20%;
-    left: 0;
-    right: 0;
-    bottom: 22%;
-    margin: auto;
-    transform: rotateZ(1.3deg);
-  }
 }
 
 @media screen and (max-width: 800px) {
@@ -294,6 +283,13 @@ a:visited {
     right: 0;
     margin: auto;
     bottom: 20%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .header .rocket {
+    width: 14%;
+    transform: rotateZ(1.3deg);
   }
 }
 
@@ -307,27 +303,39 @@ a:visited {
   width: 42%;
 }
 
-@media screen and (max-width: 550px) {
-  .header .logo {
-    width: 92%;
-  }
-}
-
 @media screen and (max-width: 800px) {
   .header .logo {
     width: 80%;
   }
 }
 
+@media screen and (max-width: 550px) {
+  .header .logo {
+    width: 92%;
+  }
+}
+
 .header .saturn {
   position: absolute;
+  top: -25%;
+  left: 5vw;
+  width: 90vw;
   z-index: 26;
+}
+
+@media screen and (max-width: 550px) {
+  .header .saturn {
+    top: 6%;
+    height: 50vh;
+    width: auto;
+    left: 4vw;
+  }
 }
 
 .header .buildings-1 {
   position: absolute;
   z-index: 27;
-  bottom: 55px;
+  bottom: 50px;
   left: 0;
   right: 0;
   margin: auto;
@@ -337,7 +345,7 @@ a:visited {
 .header .buildings-2 {
   position: absolute;
   z-index: 28;
-  bottom: 50px;
+  bottom: 49px;
   left: 0;
   right: 0;
   margin: auto;

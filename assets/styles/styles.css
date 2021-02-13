@@ -59,10 +59,105 @@ footer {
   font-size: 1.5rem;
 }
 
+.faq {
+  background-color: #000;
+  padding: 5rem 3rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .faq {
+    padding: 3rem 0;
+  }
+}
+
+.faq h2 {
+  font-size: 2.125rem;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-family: "Space Mono", monospace;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 550px) {
+  .faq h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    line-height: normal;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .faq h2 {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+}
+
+.accordion {
+  list-style: none;
+  padding: 3rem;
+  font-family: "Space Mono", monospace;
+}
+
+@media only screen and (max-width: 600px) {
+  .accordion {
+    padding: .75rem;
+  }
+}
+
+.accordion-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  cursor: pointer;
+  padding: 1.25rem;
+  margin-bottom: 2px;
+  border-radius: 0.15em;
+  transition: all 0.3s ease;
+}
+
+.accordion-header .chevron-right {
+  transition: transform .4s;
+}
+
+.accordion .accordion-header:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.accordion-content {
+  padding: 1.5rem 2rem;
+  overflow: hidden;
+  background-color: #d1d0d0;
+  color: #000;
+  border-right: 1px solid rgba(0, 0, 0, 0.125);
+  border-left: 1px solid rgba(0, 0, 0, 0.125);
+  margin-bottom: 2px;
+  display: none;
+}
+
+.accordion-content:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.rotate-clockwise {
+  transform: rotate(90deg);
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
 }
 
 .header {

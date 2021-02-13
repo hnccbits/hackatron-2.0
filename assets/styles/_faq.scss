@@ -1,0 +1,68 @@
+.faq {
+    background-color: $primary-bgcolor;
+    padding: 5rem 3rem;
+
+    @media only screen and (max-width: 600px) {
+        padding: 3rem 0;
+    }
+
+    h2 {
+        @include primary-h2;
+        margin-bottom: 1.5rem;
+
+        @media only screen and (max-width: 600px) {
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.accordion {
+    list-style: none;
+    padding: 3rem;
+    font-family: $primary-fontFamily;
+
+    @media only screen and (max-width: 600px) {
+        padding: .75rem;
+    }
+
+    &-header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgb(255, 255, 255);
+        cursor: pointer;
+        padding: 1.25rem;
+        margin-bottom: 2px;
+        border-radius: 0.15em;
+        transition: all 0.3s ease;
+
+        .chevron-right {
+            transition: transform .4s;
+        }
+    }
+
+    .accordion-header:hover {
+        background: rgba(255, 255, 255, 0.9);
+    }
+
+    &-content {
+        padding: 1.5rem 2rem;
+        overflow: hidden;
+        background-color: rgb(209, 208, 208);
+        color: #000;
+        border-right: 1px solid rgba(0, 0, 0, .125);
+        border-left: 1px solid rgba(0, 0, 0, .125);
+        margin-bottom: 2px;
+        display: none;
+
+        &:last-child {
+            border-bottom: 1px solid rgba(0, 0, 0, .125);
+        }
+    }
+}
+
+.rotate-clockwise {
+    transform: rotate(90deg);
+}

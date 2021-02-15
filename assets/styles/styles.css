@@ -438,6 +438,7 @@ footer {
 /*==========  Sections  ==========*/
 .timeline {
   position: relative;
+  color: #fff;
 }
 
 .timeline .header {
@@ -457,7 +458,6 @@ footer {
   font-size: 50px;
   line-height: 1em;
   letter-spacing: 10px;
-  color: #fff;
   font-family: "Space Mono", monospace;
 }
 
@@ -492,7 +492,7 @@ footer {
 .timeline .main-content {
   margin: 0px auto;
   position: relative;
-  background-image: url(../../resources/timeline.svg);
+  background-image: linear-gradient(to bottom, #6c00a26b, #7c0f598a, #45281c75), url(../../resources/timeline.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -703,7 +703,8 @@ footer {
   transition-duration: 0.4s;
   transform: none;
   background: rgba(255, 255, 255, 0.2);
-  padding: 0.75rem;
+  backdrop-filter: blur(20px);
+  padding: 1rem;
   border-radius: 10px;
   border: 1px solid #fff;
   font-family: "Space Mono", monospace;
@@ -750,20 +751,16 @@ footer {
     left: -60px;
     right: auto;
   }
-  .post-wrapper .post .post-content {
-    padding: 0px 50px;
-  }
 }
 
 @media only screen and (max-width: 550px) {
   .timeline .header .page-title {
     font-size: 40px;
+    letter-spacing: 4px;
+    font-weight: 300;
   }
   .timeline .post-wrapper .post {
     margin-left: 90px !important;
-  }
-  .timeline .post-wrapper .post .post-content {
-    padding: 0 25px;
   }
   .timeline .stem-wrapper {
     left: 60px;

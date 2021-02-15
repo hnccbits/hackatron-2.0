@@ -10,6 +10,9 @@ $(document).ready(function () {
   });
 });
 
+// Dynamic Year Display
+$("#year").text(new Date().getFullYear());
+
 const translate = document.querySelectorAll('.translate');
 const header = document.querySelector('.header');
 const logo = document.querySelector('.logo');

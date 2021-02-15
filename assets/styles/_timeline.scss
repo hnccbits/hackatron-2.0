@@ -1,0 +1,356 @@
+/*==========  Global  ==========*/
+
+$centered-content-width: 700px;
+
+/*==========  Basics  ==========*/
+
+@mixin clearfix_mixin() {
+  *zoom: 1;
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/*==========  Sections  ==========*/
+
+$header-background: #32776f;
+.timeline {
+  position: relative;
+  .header {
+    height: auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    background: #112c30;
+
+    .master-head {
+      padding: 7% 30px;
+    }
+
+    .page-title {
+      padding: 0 30px 0 30px;
+      font-size: 50px;
+      line-height: 1em;
+      letter-spacing: 10px;
+      color: #fff;
+    }
+
+    .page-description {
+      margin: 30px auto;
+      max-width: 600px;
+      font-size: 18px;
+      line-height: 2em;
+      color: #fff;
+    }
+
+    .scroll-button {
+      color: blue;
+      font-size: 20px;
+      padding: 15px 20px 15px 20px;
+      display: inline-block;
+      background: #3093a2; // rgba(0,0,0,.14)
+      cursor: pointer;
+      transition-duration: 0.4s;
+      user-select: none;
+
+      &:hover {
+        background: darken(#3093a2, 10%);
+      }
+      &:active {
+        background: darken(#3093a2, 20%);
+      }
+    }
+  }
+}
+
+.timeline .main-content {
+  margin: 0px auto;
+  position: relative;
+  background-image: url(../../resources/timeline.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .section-inner,
+  .post-wrapper {
+    @include clearfix_mixin;
+  }
+}
+
+.timeline .footer {
+  background: black;
+  padding: 150px 0px 300px 0px;
+  position: relative;
+  z-index: 1;
+
+  .good-bye {
+    text-align: center;
+    font-size: 18px;
+    line-height: 36px;
+
+    p {
+      display: block;
+      margin: 0px auto 30px auto;
+      max-width: 300px;
+      clear: both;
+    }
+  }
+}
+
+.timeline .section {
+  .section-inner {
+    margin: 0px auto;
+    width: $centered-content-width;
+
+    @media only screen {
+      width: auto;
+      max-width: $centered-content-width;
+    }
+  }
+}
+
+/*==========  Stem  ==========*/
+
+$stem-width: 60px;
+$stem-default-glow: $header-background;
+.timeline .stem-wrapper {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 50%;
+
+  &.color-yellow .stem-background {
+    background: #e9e566;
+  }
+  &.color-green .stem-background {
+    background: #35c189;
+  }
+  &.color-white .stem-background {
+    background: #fff;
+  }
+
+  .stem,
+  .stem-background {
+    position: absolute;
+    top: 0px;
+    left: -($stem-width / 2);
+    width: $stem-width;
+  }
+  .stem {
+    background: lighten(#888, 10%);
+    height: 100%;
+  }
+  .stem-background {
+    position: sticky;
+    transform: translateX(-50%);
+    background-color: cyan;
+    height: 23%;
+    transition-duration: 0.5s;
+    z-index: 1;
+  }
+}
+
+.stem-padding,
+.single-stem-icon {
+  width: $stem-width;
+  position: relative;
+  z-index: 5;
+  height: $stem-width; // Override with inline styling
+  margin: 0px auto;
+  background: transparent
+    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/22043/stem-mask.png)
+    repeat-y top center;
+}
+
+.single-stem-icon.scroll-to-top {
+  cursor: pointer;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/22043/scroll-to-top-icon.png);
+}
+
+/*==========  Post wrapper ==========*/
+
+.timeline .post-wrapper {
+  $post-stem-padding: 80px;
+  $post-width: ($centered-content-width/2) - $post-stem-padding;
+
+  @include clearfix_mixin;
+
+  .post {
+    position: relative;
+    width: $post-width;
+    padding: 0px 0px 60px 0px;
+    clear: both;
+    opacity: 1;
+
+    &.hidden .post-content {
+      transform: translateY(100px) rotateX(30deg);
+      opacity: 0;
+    }
+
+    &:hover .post-content,
+    &.active .post-content {
+      opacity: 1;
+      .meta {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    &:nth-child(even) {
+      float: right;
+    }
+    &:nth-child(odd) {
+      float: left;
+    }
+
+    &:nth-child(even) .stem-overlay {
+      left: -110px;
+    }
+    &:nth-child(odd) .stem-overlay {
+      right: -110px;
+    }
+
+    &.music-icon .stem-overlay .icon {
+      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/22043/bitbucket-icon.png);
+    }
+    &.bitbucket-icon .stem-overlay .icon {
+      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/22043/bitbucket-icon.png);
+    }
+    &.m-icon .stem-overlay .icon {
+      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/22043/bitbucket-icon.png);
+    }
+    &.twitter-icon .stem-overlay .icon {
+      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/22043/bitbucket-icon.png);
+    }
+
+    .stem-overlay {
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      width: $stem-width;
+      z-index: 5;
+
+      .icon {
+        background: transparent no-repeat center center;
+        height: $stem-width;
+        width: $stem-width;
+        cursor: pointer;
+      }
+
+      .stem-mask {
+        position: absolute;
+        top: $stem-width;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        background: transparent
+          url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/22043/stem-mask.png)
+          repeat-y top center;
+      }
+    }
+
+    .post-content {
+      opacity: 3;
+      transition-duration: 0.4s;
+      transform: none;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 0.75rem;
+      border-radius: 10px;
+      border: 1px solid #fff;
+      .meta {
+        color: rgba(255, 255, 255, 0.3);
+        margin: 0px 0px 15px 0px;
+        letter-spacing: 1px;
+        opacity: 0;
+        transform: translateY(-5px);
+        transition-duration: 1s;
+        transition-delay: 0.2s;
+      }
+
+      .post-title {
+        font-size: 26px;
+        line-height: 42px;
+        margin: 0px 0px 15px 0px;
+      }
+    }
+  }
+}
+
+/*==========  Media queries  ==========*/
+
+@media only screen and (max-width: 700px) {
+  .main-content {
+    &,
+    .section-inner {
+      max-width: none;
+    }
+  }
+
+  .timeline .stem-wrapper {
+    left: 80px;
+  }
+
+  .stem-padding,
+  .single-stem-icon {
+    margin: 0px;
+    float: left;
+    margin-left: 50px;
+  }
+
+  .post-wrapper .post {
+    // To add extra weight to the selector
+    &,
+    &:nth-child(even),
+    &:nth-child(odd) {
+      width: auto;
+      margin-left: 110px;
+      float: none;
+
+      .stem-overlay {
+        left: -60px;
+        right: auto;
+      }
+    }
+
+    .post-content {
+      padding: 0px 50px;
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .timeline .header .page-title {
+    font-size: 40px;
+  }
+
+  .timeline .post-wrapper .post {
+    margin-left: 90px !important;
+
+    .post-content {
+      padding: 0 25px;
+    }
+  }
+
+  .timeline .stem-wrapper {
+    left: 60px;
+  }
+
+  .stem-padding,
+  .single-stem-icon {
+    margin-left: 30px;
+  }
+  .timeline .post-wrapper .post:nth-child(even) .stem-overlay {
+    left: -60px;
+  }
+}
+
+.timeline .clearfix {
+  @include clearfix_mixin;
+}
+// The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/

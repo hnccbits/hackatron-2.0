@@ -39,6 +39,7 @@ $header-background: #32776f;
       line-height: 1em;
       letter-spacing: 10px;
       color: #fff;
+      font-family: "Space Mono", monospace;
     }
 
     .page-description {
@@ -47,6 +48,7 @@ $header-background: #32776f;
       font-size: 18px;
       line-height: 2em;
       color: #fff;
+      font-family: "Space Mono", monospace;
     }
 
     .scroll-button {
@@ -263,6 +265,7 @@ $stem-default-glow: $header-background;
       padding: 0.75rem;
       border-radius: 10px;
       border: 1px solid #fff;
+      font-family: "Space Mono", monospace;
       .meta {
         color: rgba(255, 255, 255, 0.3);
         margin: 0px 0px 15px 0px;
@@ -277,6 +280,7 @@ $stem-default-glow: $header-background;
         font-size: 26px;
         line-height: 42px;
         margin: 0px 0px 15px 0px;
+        font-family: "Space Mono", monospace;
       }
     }
   }

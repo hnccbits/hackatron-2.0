@@ -205,26 +205,7 @@ nodes.forEach(node => new Item(node));
 	}
 
 
-	// function setupClickToScroll(post) {
-
-	// 	var scrollSpeed = 750;
-
-	// 	$('.post-wrapper .post .stem-overlay .icon').click(function(e) {
-	// 		e.preventDefault();
-
-	// 		var icon = $(this),
-	// 			post = icon.closest('.post'),
-	// 			postTopOffset = post.offset().top,
-	// 			postHeight = post.height(),
-	// 			halfScreen = $(window).height() / 2,
-	// 			scrollTo = postTopOffset - halfScreen + (postHeight/2);
-
-	// 		$('html, body').animate({
-	// 			scrollTop: scrollTo
-	// 		}, scrollSpeed);
-	// 	});
-
-	// }
+	
 
 	$("#to-top").click(function() {
 		$('html,body').animate({

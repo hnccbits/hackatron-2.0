@@ -931,7 +931,7 @@ a:visited {
   font-family: "Space Mono", monospace;
   text-align: center;
   text-transform: uppercase;
-  padding: 10rem 0;
+  padding: 8rem 0;
 }
 
 @media screen and (max-width: 550px) {
@@ -943,14 +943,14 @@ a:visited {
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 700px) {
   .details {
     padding: 4rem 0.5rem;
   }
 }
 
 .details .detail-about .detail-tagline {
-  font-size: 4.685rem;
+  font-size: 3.685rem;
   color: #fff;
   font-weight: 800;
   font-family: "Space Mono", monospace;
@@ -962,7 +962,7 @@ a:visited {
 
 @media screen and (max-width: 550px) {
   .details .detail-about .detail-tagline {
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-weight: 600;
     letter-spacing: 0.8px;
     line-height: normal;
@@ -1019,9 +1019,12 @@ a:visited {
   cursor: pointer;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   .details .detail-about .detail-register {
-    transform: scale(0.6);
+    font-size: 1.25rem;
+    line-height: 45px;
+    letter-spacing: 4.2px;
+    margin: 3rem 0 5rem;
   }
 }
 
@@ -1084,6 +1087,7 @@ a:visited {
   .mascot {
     flex-direction: column;
     align-items: center;
+    padding: 2rem 0;
   }
 }
 

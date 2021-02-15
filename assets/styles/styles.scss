@@ -132,9 +132,9 @@ a:visited {
   background-color: $primary-bgcolor;
   color: $primary-text;
   @include primary-h2;
-  padding: 10rem 0;
+  padding: 8rem 0;
 
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: 700px) {
     padding: 4rem 0.5rem;
   }
 
@@ -162,8 +162,7 @@ a:visited {
       line-height: 65px;
       letter-spacing: 6.2px;
       padding: 0.8rem 3rem;
-      background: transparent linear-gradient(114deg, #9d4ccc 0%, #d7555f 100%)
-        0% 0% no-repeat padding-box;
+      background: transparent linear-gradient(114deg, #9d4ccc 0%, #d7555f 100%) 0% 0% no-repeat padding-box;
       color: $primary-text;
       margin: 5rem auto;
       text-transform: uppercase;
@@ -171,14 +170,15 @@ a:visited {
       border: none;
 
       &:hover {
-        background: transparent
-          linear-gradient(114deg, #d7555f 0%, #9d4ccc 100%) 0% 0% no-repeat
-          padding-box;
+        background: transparent linear-gradient(114deg, #d7555f 0%, #9d4ccc 100%) 0% 0% no-repeat padding-box;
         cursor: pointer;
       }
 
-      @media screen and (max-width: 550px) {
-        transform: scale(0.6);
+      @media screen and (max-width: 600px) {
+        font-size: 1.25rem;
+        line-height: 45px;
+        letter-spacing: 4.2px;
+        margin: 3rem 0 5rem;
       }
     }
   }
@@ -237,6 +237,7 @@ a:visited {
   @media only screen and (max-width: 1460px) {
     flex-direction: column;
     align-items: center;
+    padding: 2rem 0;
   }
 
   .mascot-image {

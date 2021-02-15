@@ -5,6 +5,10 @@ footer {
   background: $primary-bgcolor;
   position: relative;
   padding: 2rem;
+
+  @media only screen and (max-width: 700px) {
+    padding-top: 1rem;
+  }
 }
 
 .footer {
@@ -17,7 +21,8 @@ footer {
     @media only screen and (max-width: 700px) {
       margin-bottom: 3rem;
       font-size: 2rem;
-      padding: 1rem;
+      font-weight: 300;
+      padding: 0 0 1.5rem;
     }
   }
 
@@ -29,16 +34,15 @@ footer {
 
   &__box {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: 2rem;
     align-items: center;
     justify-items: center;
 
-    & > * {
+    &>* {
       display: grid;
       row-gap: 5px;
       padding: 1rem;
-      grid-template-columns: max-content;
 
       span {
         position: relative;
@@ -49,7 +53,17 @@ footer {
       &:nth-child(2) {
         transform: translateY(-2rem);
 
-        @media only screen and (max-width: 700px) {
+        a {
+          color: $primary-text;
+          transition: all .2s;
+
+          &:hover {
+            border-bottom: 1px solid #fff;
+            border-width: 110%;
+          }
+        }
+
+        @media only screen and (max-width: 1000px) {
           transform: translateY(0);
         }
 
@@ -59,37 +73,61 @@ footer {
         }
       }
     }
+
+    .footer__box-3 {
+      justify-self: stretch;
+      align-self: stretch;
+      row-gap: 2rem;
+      margin-bottom: 1rem;
+
+      @media only screen and (max-width: 840px) {
+        grid-column: 1/-1;
+      }
+
+      >p {
+        font-size: 1.5rem;
+      }
+    }
   }
 
   .social-main {
     position: relative;
-    display: flex;
-    cursor: pointer;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+    gap: 2rem 1rem;
+    align-items: center;
+    justify-items: center;
+
     .icon {
       position: relative;
-      width: 80px;
-      height: 80px;
-      margin: 20px;
+      width: 70px;
+      height: 70px;
       border-radius: 50px;
       transition: all 0.8s;
+      cursor: pointer;
+
       &:hover {
         background-color: #1877f2;
         box-shadow: 0 0 20px #1877f2;
       }
+
       &:hover svg circle {
         stroke-dasharray: 220;
       }
+
       &:nth-child(2):hover {
         background-color: #e60073;
         box-shadow: 0 0 20px #e60073;
       }
+
       &:nth-child(3):hover {
         background-color: #1da1f2;
         box-shadow: 0 0 20px #1da1f2;
       }
+
       &:nth-child(4):hover {
-        background-color: #640275;
-        box-shadow: 0 0 20px #640275;
+        background-color: #403e41;
+        box-shadow: 0 0 20px #403e41;
       }
 
       .bi {
@@ -99,6 +137,7 @@ footer {
         left: 50%;
         transform: translate(-50%, -50%);
       }
+
       svg circle {
         stroke-dasharray: 150;
         transition: all 0.8s;

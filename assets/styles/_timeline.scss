@@ -12,6 +12,7 @@ $centered-content-width: 700px;
     content: "";
     display: table;
   }
+
   &:after {
     clear: both;
   }
@@ -20,8 +21,11 @@ $centered-content-width: 700px;
 /*==========  Sections  ==========*/
 
 $header-background: #32776f;
+
 .timeline {
   position: relative;
+  color: $primary-text;
+
   .header {
     height: auto;
     text-align: center;
@@ -38,7 +42,6 @@ $header-background: #32776f;
       font-size: 50px;
       line-height: 1em;
       letter-spacing: 10px;
-      color: #fff;
       font-family: "Space Mono", monospace;
     }
 
@@ -64,6 +67,7 @@ $header-background: #32776f;
       &:hover {
         background: darken(#3093a2, 10%);
       }
+
       &:active {
         background: darken(#3093a2, 20%);
       }
@@ -74,7 +78,8 @@ $header-background: #32776f;
 .timeline .main-content {
   margin: 0px auto;
   position: relative;
-  background-image: url(../../resources/timeline.svg);
+  background-image: linear-gradient(to bottom, #6c00a26b, #7c0f598a,#45281c75),
+    url(../../resources/timeline.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -121,6 +126,7 @@ $header-background: #32776f;
 
 $stem-width: 60px;
 $stem-default-glow: $header-background;
+
 .timeline .stem-wrapper {
   position: absolute;
   top: 0px;
@@ -130,9 +136,11 @@ $stem-default-glow: $header-background;
   &.color-yellow .stem-background {
     background: #e9e566;
   }
+
   &.color-green .stem-background {
     background: #35c189;
   }
+
   &.color-white .stem-background {
     background: #fff;
   }
@@ -144,10 +152,12 @@ $stem-default-glow: $header-background;
     left: -($stem-width / 2);
     width: $stem-width;
   }
+
   .stem {
     background: lighten(#888, 10%);
     height: 100%;
   }
+
   .stem-background {
     position: sticky;
     transform: translateX(-50%);
@@ -165,9 +175,7 @@ $stem-default-glow: $header-background;
   z-index: 5;
   height: $stem-width; // Override with inline styling
   margin: 0px auto;
-  background: transparent
-    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/22043/stem-mask.png)
-    repeat-y top center;
+  background: transparent url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/22043/stem-mask.png) repeat-y top center;
 }
 
 .single-stem-icon.scroll-to-top {
@@ -198,6 +206,7 @@ $stem-default-glow: $header-background;
     &:hover .post-content,
     &.active .post-content {
       opacity: 1;
+
       .meta {
         opacity: 1;
         transform: none;
@@ -207,6 +216,7 @@ $stem-default-glow: $header-background;
     &:nth-child(even) {
       float: right;
     }
+
     &:nth-child(odd) {
       float: left;
     }
@@ -214,6 +224,7 @@ $stem-default-glow: $header-background;
     &:nth-child(even) .stem-overlay {
       left: -110px;
     }
+
     &:nth-child(odd) .stem-overlay {
       right: -110px;
     }
@@ -221,12 +232,15 @@ $stem-default-glow: $header-background;
     &.music-icon .stem-overlay .icon {
       background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/22043/bitbucket-icon.png);
     }
+
     &.bitbucket-icon .stem-overlay .icon {
       background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/22043/bitbucket-icon.png);
     }
+
     &.m-icon .stem-overlay .icon {
       background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/22043/bitbucket-icon.png);
     }
+
     &.twitter-icon .stem-overlay .icon {
       background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/22043/bitbucket-icon.png);
     }
@@ -251,9 +265,7 @@ $stem-default-glow: $header-background;
         bottom: 0px;
         left: 0px;
         right: 0px;
-        background: transparent
-          url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/22043/stem-mask.png)
-          repeat-y top center;
+        background: transparent url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/22043/stem-mask.png) repeat-y top center;
       }
     }
 
@@ -262,10 +274,12 @@ $stem-default-glow: $header-background;
       transition-duration: 0.4s;
       transform: none;
       background: rgba(255, 255, 255, 0.2);
-      padding: 0.75rem;
+      backdrop-filter: blur(20px);
+      padding: 1rem;
       border-radius: 10px;
       border: 1px solid #fff;
       font-family: "Space Mono", monospace;
+
       .meta {
         color: rgba(255, 255, 255, 0.3);
         margin: 0px 0px 15px 0px;
@@ -290,6 +304,7 @@ $stem-default-glow: $header-background;
 
 @media only screen and (max-width: 700px) {
   .main-content {
+
     &,
     .section-inner {
       max-width: none;
@@ -308,6 +323,7 @@ $stem-default-glow: $header-background;
   }
 
   .post-wrapper .post {
+
     // To add extra weight to the selector
     &,
     &:nth-child(even),
@@ -321,24 +337,18 @@ $stem-default-glow: $header-background;
         right: auto;
       }
     }
-
-    .post-content {
-      padding: 0px 50px;
-    }
   }
 }
 
 @media only screen and (max-width: 550px) {
   .timeline .header .page-title {
     font-size: 40px;
+    letter-spacing: 4px;
+    font-weight: 300;
   }
 
   .timeline .post-wrapper .post {
     margin-left: 90px !important;
-
-    .post-content {
-      padding: 0 25px;
-    }
   }
 
   .timeline .stem-wrapper {
@@ -349,6 +359,7 @@ $stem-default-glow: $header-background;
   .single-stem-icon {
     margin-left: 30px;
   }
+
   .timeline .post-wrapper .post:nth-child(even) .stem-overlay {
     left: -60px;
   }
@@ -357,4 +368,5 @@ $stem-default-glow: $header-background;
 .timeline .clearfix {
   @include clearfix_mixin;
 }
+
 // The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/

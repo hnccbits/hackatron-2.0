@@ -3,7 +3,7 @@
 // PRELOADER
 $(window).on('load', function () {
 	if ($('#preloader').length) {
-		$('#preloader').delay(100).fadeOut('slow', function () {
+		$('#preloader').delay(1000).fadeOut('slow', function () {
 			$(this).remove();
 		});
 	}
@@ -154,13 +154,13 @@ nodes.forEach(node => new Item(node));
 
 			var currScroll = $(window).scrollTop() > $(document).scrollTop() ? $(window).scrollTop() : $(document).scrollTop(),
 				windowHeight = $(window).height(), // Needs to be here because window can resize
-				overScroll = Math.ceil(windowHeight * .20),
+				overScroll = Math.ceil(windowHeight * 0.20),
 				treshhold = (currScroll + windowHeight) - overScroll;
 
 			posts.each(function () {
 
 				var post = $(this),
-					postScroll = post.offset().top
+					postScroll = post.offset().top;
 
 				if (postScroll > treshhold) {
 					post.addClass('hidden');
@@ -194,11 +194,11 @@ nodes.forEach(node => new Item(node));
 					if (scrollSplit > postOffset) {
 
 						// Add active class to fade in
-						post.addClass('active')
+						post.addClass('active');
 
 						// Get post color
 						var color = post.data('stem-color') ? post.data('stem-color') : null,
-							allColors = 'color-green color-yellow color-white'
+							allColors = 'color-green color-yellow color-white';
 
 						stemWrapper.removeClass(allColors);
 

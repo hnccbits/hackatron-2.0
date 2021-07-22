@@ -195,12 +195,6 @@ footer {
   font-family: "Space Mono", monospace;
 }
 
-@media only screen and (max-width: 600px) {
-  .accordion {
-    padding: .75rem;
-  }
-}
-
 .accordion-header {
   width: 100%;
   display: flex;
@@ -208,33 +202,41 @@ footer {
   align-items: center;
   background: white;
   cursor: pointer;
-  padding: 1.25rem;
+  padding: 1.5rem 2rem;
   margin-bottom: 2px;
   border-radius: 0.15em;
   transition: all 0.3s ease;
 }
 
 .accordion-header .chevron-right {
-  transition: transform .4s;
+  transition: transform 0.4s;
 }
 
 .accordion .accordion-header:hover {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .accordion-content {
   padding: 1.5rem 2rem;
   overflow: hidden;
-  background-color: #d1d0d0;
+  background: #e9e6e6;
   color: #000;
-  border-right: 1px solid rgba(0, 0, 0, 0.125);
-  border-left: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.15em;
   margin-bottom: 2px;
+  line-height: 1.6;
   display: none;
 }
 
-.accordion-content:last-child {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+@media only screen and (max-width: 600px) {
+  .accordion {
+    padding: 0.75rem;
+  }
+  .accordion-header {
+    padding: 1rem 1.5rem;
+  }
+  .accordion-content {
+    padding: 1rem 1.5rem;
+  }
 }
 
 .rotate-clockwise {

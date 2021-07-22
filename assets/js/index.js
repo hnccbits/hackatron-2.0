@@ -61,13 +61,13 @@ $('.accordion-header').click(function (e) {
 	if ($this.next().hasClass('show')) {
 		$this.children().last().removeClass('rotate-clockwise');
 		$this.next().removeClass('show');
-		$this.next().slideUp(400);
+		$this.next().slideUp(350);
 	} else {
 		$this.children().last().addClass('rotate-clockwise');
 		$this.parent().parent().find('.accordion-content').removeClass('show');
-		$this.parent().parent().find('.accordion-content').slideUp(400);
+		$this.parent().parent().find('.accordion-content').slideUp(350);
 		$this.next().toggleClass('show');
-		$this.next().slideToggle(400);
+		$this.next().slideToggle(350);
 	}
 });
 

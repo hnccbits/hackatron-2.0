@@ -1,285 +1,322 @@
-@import "./variable";
-@import "./footer";
-@import "./faq";
-@import "./sponsors";
-@import "./prizes";
-@import "./problem-tracks";
-@import "./timeline";
-@import "./preloader";
+@import './variable';
+@import './footer';
+@import './faq';
+@import './sponsors';
+@import './prizes';
+@import './problem-tracks';
+@import './timeline';
+@import './preloader';
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 a:link,
 a:visited {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 .header {
-  background: #000;
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  transform: perspective(100px);
+	background: #000;
+	position: relative;
+	height: 100vh;
+	overflow: hidden;
+	transform: perspective(100px);
 
-  .sky {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 20;
-  }
+	.sky {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		z-index: 20;
 
-  .rocket {
-    position: absolute;
-    right: 7%;
-    bottom: 18%;
-    width: 110px;
-    z-index: 21;
-    transition: all 400ms ease-out;
+		@media (max-width: 700px) {
+			object-fit: cover;
+		}
+	}
 
-    @media screen and (max-width: 800px) {
-      width: 12%;
-      left: 0;
-      right: 0;
-      margin: auto;
-      bottom: 20%;
-    }
+	.rocket {
+		position: absolute;
+		right: 7%;
+		bottom: 18%;
+		width: 110px;
+		z-index: 21;
+		transition: all 400ms ease-out;
 
-    @media screen and (max-width: 550px) {
-      width: 14%;
-      transform: rotateZ(1.3deg);
-    }
-  }
+		@media screen and (max-width: 800px) {
+			width: 12%;
+			left: 0;
+			right: 0;
+			margin: auto;
+			bottom: 20%;
+		}
 
-  .logo {
-    position: absolute;
-    z-index: 30;
-    top: 10%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 42%;
+		@media screen and (max-width: 550px) {
+			width: 14%;
+			transform: rotateZ(1.3deg);
+		}
+	}
 
-    @media screen and (max-width: 800px) {
-      width: 80%;
-    }
+	.logo {
+		position: absolute;
+		z-index: 30;
+		top: 10%;
+		left: 0;
+		right: 0;
+		margin: auto;
+		width: 42%;
 
-    @media screen and (max-width: 550px) {
-      width: 92%;
-    }
-  }
+		@media screen and (max-width: 800px) {
+			width: 80%;
+		}
 
-  .saturn {
-    position: absolute;
-    top: -25%;
-    left: 5vw;
-    width: 90vw;
-    z-index: 26;
+		@media screen and (max-width: 550px) {
+			width: 92%;
+		}
+	}
 
-    @media screen and (max-width: 1100px) {
-      width: 100vw;
-      top: 6%;
-    }
+	.saturn {
+		position: absolute;
+		top: -25%;
+		left: 5vw;
+		width: 90vw;
+		z-index: 26;
 
-    @media screen and (max-width: 550px) {
-      top: 7%;
-    }
-  }
+		@media screen and (max-width: 1100px) {
+			width: 100vw;
+			top: 6%;
+		}
 
-  .buildings-1 {
-    position: absolute;
-    z-index: 27;
-    bottom: 50px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 70%;
-  }
+		@media screen and (max-width: 550px) {
+			top: 7%;
+		}
+	}
 
-  .buildings-2 {
-    position: absolute;
-    z-index: 28;
-    bottom: 49px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 60%;
-  }
+	.buildings-1 {
+		position: absolute;
+		z-index: 27;
+		bottom: 50px;
+		left: 0;
+		right: 0;
+		margin: auto;
+		width: 70%;
+	}
 
-  .buildings-3 {
-    position: absolute;
-    z-index: 29;
-    bottom: 40px;
-    left: 0;
-    width: 100%;
-  }
+	.buildings-2 {
+		position: absolute;
+		z-index: 28;
+		bottom: 49px;
+		left: 0;
+		right: 0;
+		margin: auto;
+		width: 60%;
+	}
 
-  .layer {
-    position: absolute;
-    z-index: 29;
-    bottom: 0;
-    height: 50px;
-    width: 100%;
-    left: 0;
-  }
+	.buildings-3 {
+		position: absolute;
+		z-index: 29;
+		bottom: 40px;
+		left: 0;
+		width: 100%;
+	}
+
+	.layer {
+		position: absolute;
+		z-index: 29;
+		bottom: 0;
+		height: 50px;
+		width: 100%;
+		left: 0;
+	}
 }
 
 .details {
-  background-color: $primary-bgcolor;
-  color: $primary-text;
-  @include primary-h2;
-  padding: 8rem 0;
+	background-color: $primary-bgcolor;
+	color: $primary-text;
+	@include primary-h2;
+	padding: 8rem 0;
 
-  @media screen and (max-width: 700px) {
-    padding: 4rem 0.5rem;
-  }
+	@media screen and (max-width: 700px) {
+		padding: 4rem 0.5rem;
+	}
 
-  .detail-about {
-    .detail-tagline {
-      @include primary-h1;
-    }
+	.detail-about {
+		padding: 0 1rem;
 
-    .detail-date {
-      @include headers-margin;
-    }
+		.detail-tagline {
+			@include primary-h1;
+		}
 
-    .detail-clubName {
-      @include headers-margin;
-    }
+		.detail-date {
+			@include primary-h2;
+			@include headers-margin;
+		}
 
-    .detail-address {
-      @include headers-margin;
-    }
+		.detail-clubName {
+			@include primary-h2;
+			@include headers-margin;
+		}
 
-    .detail-register {
-      border-radius: 50px;
-      border: 1px solid $primary-border;
-      font-size: $size-h2;
-      line-height: 65px;
-      letter-spacing: 6.2px;
-      padding: 0.8rem 3rem;
-      background: transparent linear-gradient(114deg, #9d4ccc 0%, #d7555f 100%) 0% 0% no-repeat padding-box;
-      color: $primary-text;
-      margin: 5rem auto;
-      text-transform: uppercase;
-      outline: none;
-      border: none;
+		.detail-address {
+			@include primary-h2;
+			@include headers-margin;
+		}
 
-      &:hover {
-        background: transparent linear-gradient(114deg, #d7555f 0%, #9d4ccc 100%) 0% 0% no-repeat padding-box;
-        cursor: pointer;
-      }
+		.detail-register {
+			border-radius: 50px;
+			border: 1px solid $primary-border;
+			font-size: $size-h2;
+			line-height: 65px;
+			letter-spacing: 6.2px;
+			padding: 0.8rem 3rem;
+			background: transparent linear-gradient(114deg, #9d4ccc 0%, #d7555f 100%)
+				0% 0% no-repeat padding-box;
+			color: $primary-text;
+			margin: 5rem auto;
+			text-transform: uppercase;
+			outline: none;
+			border: none;
 
-      @media screen and (max-width: 600px) {
-        font-size: 1.25rem;
-        line-height: 40px;
-        letter-spacing: 4.2px;
-        margin: 3rem 0 5rem;
-      }
-    }
-  }
+			&:hover {
+				background: transparent
+					linear-gradient(114deg, #d7555f 0%, #9d4ccc 100%) 0% 0% no-repeat
+					padding-box;
+				cursor: pointer;
+			}
 
-  .detail-dscp {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 80%;
-    margin: 0 auto;
-    border: 6px solid #fff;
-    outline: 12px solid $secondary-border;
-    padding: 6rem 5rem;
+			@media screen and (max-width: 600px) {
+				font-size: 1.25rem;
+				line-height: 40px;
+				letter-spacing: 4.2px;
+				margin: 3rem 0 5rem;
+			}
+		}
+	}
 
-    @media screen and (max-width: 1460px) {
-      flex-direction: column-reverse;
-      padding: 1rem 0.5rem;
-    }
+	.detail-dscp {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: center;
+		width: 90%;
+		margin: 0 auto;
+		border: 6px solid #fff;
+		outline: 12px solid $secondary-border;
+		padding: 6rem 5rem;
 
-    .dscp-info {
-      flex: 1;
+		flex-direction: column-reverse;
+		text-align: center;
 
-      .dscp-hackatron {
-        text-align: left;
-        margin-bottom: 2rem;
-      }
+		@media (max-width: 800px) {
+			padding: 1.5rem 1rem;
+			width: 95%;
+		}
 
-      .dscp-para {
-        padding-right: 5rem;
-        text-align: justify;
+		.dscp-info {
+			flex: 1;
 
-        @media screen and (max-width: 1460px) {
-          padding-right: 0;
-        }
-      }
-    }
+			@media (max-width: 550px) {
+				margin: 1rem auto 0;
+			}
 
-    .dscp-image {
-      flex: 1;
+			.dscp-hackatron {
+				margin: 2rem auto;
+				@include primary-h2;
+				font-weight: 700 !important;
+			}
 
-      img {
-        width: 100%;
-      }
-    }
-  }
+			.dscp-para {
+				font-weight: normal;
+				font-size: 1.6rem;
+				line-height: 1.6;
+				text-transform: none;
+
+				@media screen and (max-width: 1460px) {
+					padding-right: 0;
+					width: 100%;
+					margin: auto;
+				}
+
+				@media (max-width: 800px) {
+					font-size: 1.4rem;
+				}
+
+				@media (max-width: 550px) {
+					font-size: 1.2rem;
+				}
+			}
+		}
+
+		.dscp-image {
+			flex: 1;
+
+			img {
+				width: 90%;
+				margin-bottom: 2rem;
+
+				@media (max-width: 550px) {
+					width: 100%;
+				}
+			}
+		}
+	}
 }
 
 .mascot {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  width: 80%;
-  margin: 5% auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	width: 80%;
+	margin: 5% auto;
 
-  @media only screen and (max-width: 1460px) {
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 0;
-  }
+	@media only screen and (max-width: 1460px) {
+		flex-direction: column;
+		align-items: center;
+		padding: 2rem 0;
+	}
 
-  .mascot-image {
-    flex: 1;
+	.mascot-image {
+		flex: 1;
 
-    img {
-      width: 100%;
-    }
-  }
+		img {
+			width: 100%;
+		}
+	}
 
-  .mascot-info {
-    flex: 1;
-    padding-left: 2rem;
+	.mascot-info {
+		flex: 1;
+		padding-left: 2rem;
 
-    .mascot-header {
-      font-size: 3rem;
-      color: #000;
-      font-weight: 700;
-      text-align: left;
-      font-family: $primary-fontFamily;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 2rem;
+		.mascot-header {
+			font-size: 3rem;
+			color: #000;
+			font-weight: 700;
+			text-align: left;
+			font-family: $primary-fontFamily;
+			text-transform: uppercase;
+			letter-spacing: 1.5px;
+			margin: 2rem auto;
 
-      @media only screen and (max-width: 600px) {
-        font-size: 2.2rem;
-        font-weight: 300;
-      }
-    }
+			@media only screen and (max-width: 600px) {
+				font-size: 2.2rem;
+				font-weight: 300;
+			}
+		}
 
-    .mascot-info-para {
-      font-size: 1.8rem;
-      font-weight: 400;
-      font-family: $primary-fontFamily;
-      text-align: justify;
-      width: 80%;
+		.mascot-info-para {
+			font-size: 1.8rem;
+			font-weight: 400;
+			font-family: $primary-fontFamily;
+			text-align: justify;
+			width: 80%;
 
-      @media only screen and (max-width: 600px) {
-        text-align: left;
-        font-size: 1.4rem;
-      }
-    }
-  }
+			@media only screen and (max-width: 600px) {
+				text-align: left;
+				font-size: 1.4rem;
+			}
+		}
+	}
 }

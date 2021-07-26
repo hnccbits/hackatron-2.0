@@ -9,10 +9,11 @@
 	h2 {
 		@include primary-h2;
 		margin-bottom: 1.5rem;
+		font-size: 2.8rem;
 
 		@media only screen and (max-width: 600px) {
 			margin-bottom: 2rem;
-			font-size: 1.5rem;
+			font-size: 1.8rem;
 		}
 	}
 }

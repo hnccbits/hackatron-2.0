@@ -510,7 +510,7 @@ footer {
   font-size: 50px;
   line-height: 1em;
   letter-spacing: 10px;
-  font-family: "Space Mono", monospace;
+  font-family: 'Space Mono', monospace;
 }
 
 .timeline .header .page-description {
@@ -519,7 +519,7 @@ footer {
   font-size: 18px;
   line-height: 2em;
   color: #fff;
-  font-family: "Space Mono", monospace;
+  font-family: 'Space Mono', monospace;
 }
 
 .timeline .header .scroll-button {
@@ -558,7 +558,7 @@ footer {
 .timeline .main-content .section-inner:before, .timeline .main-content .section-inner:after,
 .timeline .main-content .post-wrapper:before,
 .timeline .main-content .post-wrapper:after {
-  content: "";
+  content: '';
   display: table;
 }
 
@@ -662,7 +662,7 @@ footer {
 }
 
 .timeline .post-wrapper:before, .timeline .post-wrapper:after {
-  content: "";
+  content: '';
   display: table;
 }
 
@@ -758,7 +758,13 @@ footer {
   padding: 1rem;
   border-radius: 10px;
   border: 1px solid #fff;
-  font-family: "Space Mono", monospace;
+  font-family: 'Space Mono', monospace;
+}
+
+@media only screen and (max-width: 500px) {
+  .timeline .post-wrapper .post .post-content {
+    width: 96%;
+  }
 }
 
 .timeline .post-wrapper .post .post-content .meta {
@@ -775,7 +781,7 @@ footer {
   font-size: 26px;
   line-height: 42px;
   margin: 0px 0px 15px 0px;
-  font-family: "Space Mono", monospace;
+  font-family: 'Space Mono', monospace;
 }
 
 /*==========  Media queries  ==========*/
@@ -830,7 +836,7 @@ footer {
 }
 
 .timeline .clearfix:before, .timeline .clearfix:after {
-  content: "";
+  content: '';
   display: table;
 }
 
@@ -1222,6 +1228,7 @@ a:visited {
   text-transform: uppercase;
   outline: none;
   border: none;
+  transition: all 400ms ease-in-out;
 }
 
 .details .detail-about .detail-register:hover {
@@ -1351,6 +1358,7 @@ a:visited {
     flex-direction: column;
     align-items: center;
     padding: 2rem 0;
+    width: 100%;
   }
 }
 
@@ -1397,6 +1405,6 @@ a:visited {
   .mascot .mascot-info .mascot-info-para {
     text-align: left;
     font-size: 1.4rem;
+    width: 100%;
   }
 }
-/*# sourceMappingURL=styles.css.map */

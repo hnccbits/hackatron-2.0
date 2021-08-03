@@ -9,7 +9,7 @@ $centered-content-width: 700px;
 
   &:before,
   &:after {
-    content: "";
+    content: '';
     display: table;
   }
 
@@ -42,7 +42,7 @@ $header-background: #32776f;
       font-size: 50px;
       line-height: 1em;
       letter-spacing: 10px;
-      font-family: "Space Mono", monospace;
+      font-family: 'Space Mono', monospace;
     }
 
     .page-description {
@@ -51,7 +51,7 @@ $header-background: #32776f;
       font-size: 18px;
       line-height: 2em;
       color: #fff;
-      font-family: "Space Mono", monospace;
+      font-family: 'Space Mono', monospace;
     }
 
     .scroll-button {
@@ -175,7 +175,9 @@ $stem-default-glow: $header-background;
   z-index: 5;
   height: $stem-width; // Override with inline styling
   margin: 0px auto;
-  background: transparent url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/22043/stem-mask.png) repeat-y top center;
+  background: transparent
+    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/22043/stem-mask.png)
+    repeat-y top center;
 }
 
 .single-stem-icon.scroll-to-top {
@@ -265,7 +267,9 @@ $stem-default-glow: $header-background;
         bottom: 0px;
         left: 0px;
         right: 0px;
-        background: transparent url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/22043/stem-mask.png) repeat-y top center;
+        background: transparent
+          url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/22043/stem-mask.png)
+          repeat-y top center;
       }
     }
 
@@ -273,11 +277,19 @@ $stem-default-glow: $header-background;
       opacity: 3;
       transition-duration: 0.4s;
       transform: none;
-      background: linear-gradient(to bottom, rgba(255, 255, 255, .4), rgba(0, 0, 0, .7));
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.4),
+        rgba(0, 0, 0, 0.7)
+      );
       padding: 1rem;
       border-radius: 10px;
       border: 1px solid #fff;
-      font-family: "Space Mono", monospace;
+      font-family: 'Space Mono', monospace;
+
+      @media only screen and (max-width: 500px) {
+        width: 96%;
+      }
 
       .meta {
         color: rgba(255, 255, 255, 0.3);
@@ -293,7 +305,7 @@ $stem-default-glow: $header-background;
         font-size: 26px;
         line-height: 42px;
         margin: 0px 0px 15px 0px;
-        font-family: "Space Mono", monospace;
+        font-family: 'Space Mono', monospace;
       }
     }
   }
@@ -303,7 +315,6 @@ $stem-default-glow: $header-background;
 
 @media only screen and (max-width: 700px) {
   .main-content {
-
     &,
     .section-inner {
       max-width: none;
@@ -322,7 +333,6 @@ $stem-default-glow: $header-background;
   }
 
   .post-wrapper .post {
-
     // To add extra weight to the selector
     &,
     &:nth-child(even),
